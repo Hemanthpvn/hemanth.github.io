@@ -1,22 +1,1204 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2113.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
-    p.p3 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
-    span.s1 {font-kerning: none}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hemanth Pasumarthi | Security Automation Leader & AVP</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js for premium skill visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Google Fonts (Inter & JetBrains Mono for cyber theme) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for secure cyber icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        cyber: {
+                            bg: '#05070f',
+                            card: '#0c1020',
+                            border: '#1e294b',
+                            primary: '#3b82f6', // Cyber Blue
+                            secondary: '#8b5cf6', // Cyber Purple
+                            accent: '#10b981', // Safe Green
+                            danger: '#ef4444', // Threat Red
+                            warning: '#f59e0b' // Warning Amber
+                        }
+                    },
+                    boxShadow: {
+                        'neon-blue': '0 0 15px rgba(59, 130, 246, 0.4)',
+                        'neon-purple': '0 0 15px rgba(139, 92, 246, 0.4)',
+                        'neon-green': '0 0 15px rgba(16, 185, 129, 0.4)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #05070f;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.08) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, rgba(139, 92, 246, 0.08) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.05) 0px, transparent 50%);
+            background-attachment: fixed;
+        }
+        
+        /* Custom animated grid for military/cyber defense vibe */
+        .cyber-grid {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(30, 41, 59, 0.25) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(30, 41, 59, 0.25) 1px, transparent 1px);
+        }
+
+        /* Scanline simulation effect */
+        .scanline::before {
+            content: " ";
+            display: block;
+            position: fixed;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 99999;
+            background-size: 100% 4px, 6px 100%;
+            pointer-events: none;
+            opacity: 0.15;
+        }
+
+        @keyframes pulse-border {
+            0%, 100% { border-color: rgba(59, 130, 246, 0.3); }
+            50% { border-color: rgba(59, 130, 246, 0.8); }
+        }
+        .pulse-border-blue {
+            animation: pulse-border 2s infinite ease-in-out;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #05070f;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e294b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3b82f6;
+        }
+    </style>
 </head>
-<body>
-<p class="p1"><span class="s1"></span><br></p>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Hello World</b></span></h1>
-<p class="p3"><span class="s1">I'm hosted with GitHub Pages. Let's Catch up</span></p>
-<p class="p4"><span class="s1">~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ -- INSERT --<span class="Apple-converted-space"> </span></span></p>
+<body class="text-slate-100 font-sans scanline overflow-x-hidden antialiased">
+
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-cyber-bg/85 backdrop-blur-md border-b border-cyber-border/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-tr from-cyber-primary to-cyber-secondary flex items-center justify-center text-white font-bold text-lg shadow-neon-blue">
+                        HP
+                    </div>
+                    <div>
+                        <span class="block text-slate-100 font-extrabold text-sm sm:text-base tracking-wider uppercase font-mono">Hemanth Pasumarthi</span>
+                        <span class="block text-cyber-accent text-[11px] font-mono tracking-widest uppercase">AVP | Security Automation</span>
+                    </div>
+                </div>
+                <!-- Desktop Nav Links -->
+                <div class="hidden md:flex items-center space-x-8 text-sm font-mono font-medium">
+                    <a href="#about" class="text-slate-300 hover:text-cyber-primary transition-colors flex items-center gap-2"><i class="fa-solid fa-shield-halved text-xs"></i> Command</a>
+                    <a href="#simulator" class="text-slate-300 hover:text-cyber-primary transition-colors flex items-center gap-2"><i class="fa-solid fa-network-wired text-xs"></i> SOAR Playbook</a>
+                    <a href="#competencies" class="text-slate-300 hover:text-cyber-primary transition-colors flex items-center gap-2"><i class="fa-solid fa-chart-line text-xs"></i> Visual Metrics</a>
+                    <a href="#experience" class="text-slate-300 hover:text-cyber-primary transition-colors flex items-center gap-2"><i class="fa-solid fa-timeline text-xs"></i> Chronology</a>
+                    <a href="#credentials" class="text-slate-300 hover:text-cyber-primary transition-colors flex items-center gap-2"><i class="fa-solid fa-award text-xs"></i> Credentials</a>
+                    <a href="#terminal" class="px-4 py-2 bg-slate-900 border border-cyber-border hover:border-cyber-primary text-cyber-primary rounded-lg transition-all shadow-md hover:shadow-neon-blue flex items-center gap-2"><i class="fa-solid fa-terminal text-xs"></i> SEC-CON</a>
+                </div>
+                <!-- Mobile Navigation Toggle -->
+                <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white focus:outline-none focus:text-white" aria-label="Toggle menu">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu container -->
+        <div id="mobile-menu" class="hidden md:hidden bg-cyber-card border-b border-cyber-border px-4 pt-2 pb-4 space-y-2 font-mono text-sm">
+            <a href="#about" class="block py-2 text-slate-300 hover:text-cyber-primary"><i class="fa-solid fa-shield-halved mr-2"></i> Command Center</a>
+            <a href="#simulator" class="block py-2 text-slate-300 hover:text-cyber-primary"><i class="fa-solid fa-network-wired mr-2"></i> Playbook Simulator</a>
+            <a href="#competencies" class="block py-2 text-slate-300 hover:text-cyber-primary"><i class="fa-solid fa-chart-line mr-2"></i> Skills Radar</a>
+            <a href="#experience" class="block py-2 text-slate-300 hover:text-cyber-primary"><i class="fa-solid fa-timeline mr-2"></i> Chronology</a>
+            <a href="#credentials" class="block py-2 text-slate-300 hover:text-cyber-primary"><i class="fa-solid fa-award mr-2"></i> Credentials</a>
+            <a href="#terminal" class="block py-2 text-cyber-primary hover:underline"><i class="fa-solid fa-terminal mr-2"></i> Terminal & Connect</a>
+        </div>
+    </nav>
+
+    <section id="about" class="relative pt-32 pb-20 md:py-36 min-h-screen flex items-center justify-center cyber-grid overflow-hidden">
+        <div class="absolute inset-0 z-0 bg-radial-gradient from-transparent via-[#05070f]/90 to-[#05070f]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Column: Command Summary & Core Focus -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyber-primary/10 border border-cyber-primary/30 text-cyber-primary text-xs font-mono font-medium tracking-wider">
+                        <span class="w-2 h-2 rounded-full bg-cyber-accent animate-pulse"></span> SYSTEM STATUS: ONLINE & DEFENSIBLE
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-cyber-primary leading-tight">
+                        Hemanth Pasumarthi
+                    </h1>
+                    <h2 class="text-lg sm:text-2xl font-mono text-slate-400 font-semibold flex items-center gap-2 flex-wrap">
+                        <span class="text-cyber-secondary">Security Automation Leader</span>
+                        <span class="text-slate-600 hidden sm:inline">|</span> 
+                        <span class="text-cyber-accent">AVP Cyber Detection & SOAR</span>
+                    </h2>
+
+                    <p class="text-slate-400 text-sm sm:text-base leading-relaxed max-w-2xl">
+                        With over <span class="text-white font-semibold">10+ years of cybersecurity leadership</span>, I specialize in transforming legacy incident response into scalable, intelligence-driven autonomous defense systems. Driving automated operations at scale to protect global critical systems.
+                    </p>
+
+                    <!-- Fast Stat Grid -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">
+                        <div class="bg-cyber-card/60 backdrop-blur border border-cyber-border rounded-xl p-4 hover:border-cyber-primary/50 transition-all">
+                            <div class="text-2xl sm:text-3xl font-bold text-cyber-primary font-mono">10+ Yrs</div>
+                            <div class="text-[11px] sm:text-xs text-slate-500 font-mono tracking-wider uppercase mt-1">SecOps & IR Experience</div>
+                        </div>
+                        <div class="bg-cyber-card/60 backdrop-blur border border-cyber-border rounded-xl p-4 hover:border-cyber-primary/50 transition-all">
+                            <div class="text-2xl sm:text-3xl font-bold text-cyber-accent font-mono">8+ Yrs</div>
+                            <div class="text-[11px] sm:text-xs text-slate-500 font-mono tracking-wider uppercase mt-1">Synchrony Leadership</div>
+                        </div>
+                        <div class="col-span-2 sm:col-span-1 bg-cyber-card/60 backdrop-blur border border-cyber-border rounded-xl p-4 hover:border-cyber-primary/50 transition-all">
+                            <div class="text-2xl sm:text-3xl font-bold text-cyber-secondary font-mono">SOAR</div>
+                            <div class="text-[11px] sm:text-xs text-slate-500 font-mono tracking-wider uppercase mt-1">Agentic Orchestrator</div>
+                        </div>
+                    </div>
+
+                    <!-- CTA Action Row -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
+                        <a href="#simulator" class="px-6 py-3.5 bg-gradient-to-r from-cyber-primary to-cyber-secondary hover:from-blue-600 hover:to-purple-700 text-white rounded-xl text-center font-semibold tracking-wide transition-all duration-300 shadow-md hover:shadow-neon-blue flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-play text-sm"></i> Launch SOAR Simulation
+                        </a>
+                        <a href="#competencies" class="px-6 py-3.5 bg-cyber-card border border-cyber-border hover:border-slate-500 text-slate-300 rounded-xl text-center font-semibold transition-all flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-chart-simple text-sm"></i> View Skill Metrics
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Visual Autonomous SOC Monitor Frame -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md bg-cyber-card/85 rounded-2xl border border-cyber-border pulse-border-blue p-5 shadow-2xl overflow-hidden">
+                        <!-- Neon ambient lights behind -->
+                        <div class="absolute -top-10 -right-10 w-40 h-40 bg-cyber-primary/20 rounded-full blur-3xl"></div>
+                        <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-cyber-secondary/20 rounded-full blur-3xl"></div>
+
+                        <!-- Top visual elements -->
+                        <div class="flex items-center justify-between border-b border-cyber-border/80 pb-3 mb-4">
+                            <div class="flex items-center space-x-2">
+                                <span class="w-3 h-3 rounded-full bg-cyber-danger block"></span>
+                                <span class="w-3 h-3 rounded-full bg-cyber-warning block"></span>
+                                <span class="w-3 h-3 rounded-full bg-cyber-accent block"></span>
+                            </div>
+                            <div class="text-[10px] font-mono text-slate-500 tracking-wider">SEC-CORE-V2.8.5</div>
+                        </div>
+
+                        <!-- Live Metrics Screen -->
+                        <div class="space-y-4">
+                            <!-- Visual Ring Graph -->
+                            <div class="flex items-center justify-between bg-[#070b18] p-4 rounded-xl border border-cyber-border/40">
+                                <div class="space-y-1">
+                                    <span class="text-xs font-mono text-slate-500 tracking-wider block">AUTONOMOUS MITIGATION</span>
+                                    <span class="text-2xl font-bold text-white font-mono tracking-tight">94.2%</span>
+                                    <span class="text-[10px] text-cyber-accent font-mono block"><i class="fa-solid fa-arrow-trend-up"></i> +12.4% vs Manual Baselines</span>
+                                </div>
+                                <div class="relative w-16 h-16 flex items-center justify-center">
+                                    <!-- Simple dynamic SVG visualizer -->
+                                    <svg class="w-full h-full transform -rotate-90">
+                                        <circle cx="32" cy="32" r="28" stroke="#1e294b" stroke-width="4" fill="transparent" />
+                                        <circle cx="32" cy="32" r="28" stroke="#10b981" stroke-width="4" fill="transparent" stroke-dasharray="175" stroke-dashoffset="15" />
+                                    </svg>
+                                    <span class="absolute text-[11px] font-mono text-white font-semibold">94%</span>
+                                </div>
+                            </div>
+
+                            <!-- Attack Matrix Heatmap mockup -->
+                            <div class="bg-[#070b18] p-4 rounded-xl border border-cyber-border/40 space-y-2">
+                                <div class="flex justify-between items-center text-[10px] font-mono text-slate-500">
+                                    <span>MITRE ATT&CK ALIGNED DETECTIONS</span>
+                                    <span class="text-cyber-accent">Active Defense</span>
+                                </div>
+                                <div class="grid grid-cols-7 gap-1">
+                                    <div class="h-6 bg-cyber-primary/80 rounded" title="Initial Access"></div>
+                                    <div class="h-6 bg-cyber-secondary/90 rounded" title="Execution"></div>
+                                    <div class="h-6 bg-cyber-primary/50 rounded" title="Persistence"></div>
+                                    <div class="h-6 bg-cyber-accent/60 rounded" title="Privilege Escalation"></div>
+                                    <div class="h-6 bg-cyber-secondary/40 rounded" title="Defense Evasion"></div>
+                                    <div class="h-6 bg-cyber-accent/80 rounded" title="Credential Access"></div>
+                                    <div class="h-6 bg-cyber-primary/90 rounded" title="Discovery"></div>
+                                </div>
+                                <div class="flex justify-between text-[9px] font-mono text-slate-500">
+                                    <span>T1190</span>
+                                    <span>T1059</span>
+                                    <span>T1078</span>
+                                    <span>T1548</span>
+                                    <span>T1036</span>
+                                    <span>T1110</span>
+                                    <span>T1046</span>
+                                </div>
+                            </div>
+
+                            <!-- SOAR Live Stream Module -->
+                            <div class="p-3 bg-slate-950 rounded-xl border border-cyber-border/40 font-mono text-[11px] space-y-2 max-h-40 overflow-hidden">
+                                <div class="flex justify-between text-slate-500 border-b border-cyber-border/40 pb-1">
+                                    <span>INGEST TIME</span>
+                                    <span>REMEDIAL ACTIONS</span>
+                                </div>
+                                <div class="space-y-1.5" id="hero-log-stream">
+                                    <div class="text-cyber-accent flex items-center gap-1.5"><i class="fa-solid fa-check"></i> <span>DPI parsed UEBA anomalies - OK</span></div>
+                                    <div class="text-cyber-primary flex items-center gap-1.5"><i class="fa-solid fa-arrows-spin animate-spin"></i> <span>Automating EDR isolation play...</span></div>
+                                    <div class="text-slate-400 flex items-center gap-1.5"><i class="fa-solid fa-spinner"></i> <span>Awaiting Splunk alert match...</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="simulator" class="py-24 border-t border-cyber-border bg-[#070b1a]/60 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <div class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-cyber-secondary/15 border border-cyber-secondary/30 text-cyber-secondary text-xs font-mono tracking-widest uppercase">
+                    Interactive Capability Simulation
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
+                    Agentic Automation Playbook Execution
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base">
+                    Hemanth designs autonomous SOAR orchestrations that correlate network intelligence and trigger containment in seconds. Run a visual threat response workflow below.
+                </p>
+            </div>
+
+            <!-- Playground Area -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                <!-- Playbook Visual Workflow Nodes -->
+                <div class="lg:col-span-8 bg-cyber-card border border-cyber-border rounded-2xl p-6 relative flex flex-col justify-between overflow-hidden">
+                    <!-- Graph Mesh Overlay -->
+                    <div class="absolute inset-0 cyber-grid opacity-15 pointer-events-none"></div>
+
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pb-6 border-b border-cyber-border/80 relative z-10">
+                        <div>
+                            <span class="text-xs text-slate-500 font-mono uppercase tracking-wider block">SOAR SYSTEM OVERVIEW</span>
+                            <span class="text-lg font-mono font-bold text-white flex items-center gap-2">
+                                Active Playbook: <span id="selected-playbook-name" class="text-cyber-primary">Phishing Automated Containment</span>
+                            </span>
+                        </div>
+                        <!-- Choose Scenario Buttons -->
+                        <div class="flex items-center gap-2">
+                            <button onclick="switchPlaybook('phishing')" id="btn-playbook-phishing" class="px-3.5 py-1.5 text-xs font-mono font-semibold rounded-lg bg-cyber-primary/20 text-cyber-primary border border-cyber-primary/50 transition-all hover:bg-cyber-primary/30">
+                                Scenario 1: Phishing IR
+                            </button>
+                            <button onclick="switchPlaybook('lateral')" id="btn-playbook-lateral" class="px-3.5 py-1.5 text-xs font-mono font-semibold rounded-lg bg-slate-900 text-slate-400 border border-cyber-border transition-all hover:border-cyber-primary/40 hover:text-white">
+                                Scenario 2: Anomalous AD Threat
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- SVG Connection Map -->
+                    <div class="relative py-12 px-2 sm:px-8 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-4 z-10">
+                        
+                        <!-- Line connections for larger screens -->
+                        <div class="absolute inset-y-0 left-1/2 w-0.5 bg-cyber-border md:hidden"></div>
+                        <div class="absolute inset-x-0 top-1/2 h-0.5 bg-cyber-border hidden md:block z-0"></div>
+
+                        <!-- Node 1: Alert Ingestion -->
+                        <div id="node-1" class="w-full md:w-1/4 relative z-10 flex flex-col items-center">
+                            <div class="w-14 h-14 rounded-xl bg-[#0e172a] border border-cyber-border flex items-center justify-center text-cyber-warning text-xl transition-all duration-300 shadow-lg" id="node-1-icon">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                            </div>
+                            <span class="mt-3 font-mono text-xs font-bold text-white tracking-wide text-center">1. Alert Ingestion</span>
+                            <span class="text-[10px] text-slate-500 font-mono mt-0.5 text-center" id="node-1-sub">Phishing Alert Ingested</span>
+                        </div>
+
+                        <!-- Node 2: Intel Enrichment -->
+                        <div id="node-2" class="w-full md:w-1/4 relative z-10 flex flex-col items-center">
+                            <div class="w-14 h-14 rounded-xl bg-[#0e172a] border border-cyber-border flex items-center justify-center text-slate-500 text-xl transition-all duration-300 shadow-lg" id="node-2-icon">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <span class="mt-3 font-mono text-xs font-bold text-slate-400 tracking-wide text-center" id="node-2-title">2. Agentic Check</span>
+                            <span class="text-[10px] text-slate-500 font-mono mt-0.5 text-center" id="node-2-sub">Checking IOCs vs TI</span>
+                        </div>
+
+                        <!-- Node 3: Active Response -->
+                        <div id="node-3" class="w-full md:w-1/4 relative z-10 flex flex-col items-center">
+                            <div class="w-14 h-14 rounded-xl bg-[#0e172a] border border-cyber-border flex items-center justify-center text-slate-500 text-xl transition-all duration-300 shadow-lg" id="node-3-icon">
+                                <i class="fa-solid fa-ban"></i>
+                            </div>
+                            <span class="mt-3 font-mono text-xs font-bold text-slate-400 tracking-wide text-center" id="node-3-title">3. containment</span>
+                            <span class="text-[10px] text-slate-500 font-mono mt-0.5 text-center" id="node-3-sub">EDR Endpoint Isolation</span>
+                        </div>
+
+                        <!-- Node 4: SOC Feedback Loop -->
+                        <div id="node-4" class="w-full md:w-1/4 relative z-10 flex flex-col items-center">
+                            <div class="w-14 h-14 rounded-xl bg-[#0e172a] border border-cyber-border flex items-center justify-center text-slate-500 text-xl transition-all duration-300 shadow-lg" id="node-4-icon">
+                                <i class="fa-solid fa-clipboard-check"></i>
+                            </div>
+                            <span class="mt-3 font-mono text-xs font-bold text-slate-400 tracking-wide text-center" id="node-4-title">4. Closed loop</span>
+                            <span class="text-[10px] text-slate-500 font-mono mt-0.5 text-center" id="node-4-sub">AAR report generated</span>
+                        </div>
+
+                    </div>
+
+                    <!-- Simulator Control Row -->
+                    <div class="pt-6 border-t border-cyber-border/80 flex flex-col sm:flex-row justify-between items-center gap-4 relative z-10">
+                        <span class="text-xs font-mono text-slate-400 text-center sm:text-left">
+                            Click <strong class="text-cyber-accent">Run Simulation</strong> to observe live execution timings and logic.
+                        </span>
+                        <div class="flex items-center gap-3 w-full sm:w-auto">
+                            <button onclick="resetSimulation()" class="flex-1 sm:flex-none px-4 py-2 text-xs font-mono bg-slate-900 text-slate-300 border border-cyber-border rounded-lg hover:border-slate-500 transition-all">
+                                <i class="fa-solid fa-rotate-left mr-1"></i> Reset Flow
+                            </button>
+                            <button id="btn-run-simulation" onclick="startPlaybookSimulation()" class="flex-1 sm:flex-none px-5 py-2.5 text-xs font-mono bg-cyber-accent text-slate-950 font-bold rounded-lg shadow-md hover:shadow-neon-green transition-all flex items-center justify-center gap-1.5">
+                                <i class="fa-solid fa-play text-[10px]"></i> Run Simulation
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live SOAR Console Feed -->
+                <div class="lg:col-span-4 bg-[#03050a] border border-cyber-border rounded-2xl p-5 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between border-b border-cyber-border pb-3">
+                            <div class="flex items-center space-x-2">
+                                <span class="w-2 h-2 rounded-full bg-cyber-accent block animate-pulse"></span>
+                                <span class="text-xs font-mono text-slate-300 font-bold">SOAR-AGENT-LIVE.LOG</span>
+                            </div>
+                            <span class="text-[10px] font-mono text-slate-500">AUTONOMOUS</span>
+                        </div>
+                        
+                        <!-- Terminal stream of outputs -->
+                        <div id="sim-terminal" class="space-y-2.5 font-mono text-xs text-slate-400 min-h-[220px] max-h-[300px] overflow-y-auto pr-1">
+                            <div class="text-slate-500">// System ready. Click 'Run Simulation' to initiate telemetry ingestion.</div>
+                        </div>
+                    </div>
+
+                    <!-- Remediation Speed Visual Card -->
+                    <div class="mt-4 pt-4 border-t border-cyber-border bg-cyber-card/60 p-3.5 rounded-xl border border-cyber-border/60">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[11px] font-mono text-slate-500 uppercase">Automation Remediation Speed</span>
+                            <span id="speed-indicator" class="text-xs font-mono text-slate-500 font-semibold">Idle</span>
+                        </div>
+                        <!-- Progression bar of elapsed simulation -->
+                        <div class="w-full bg-[#11162d] h-2 rounded-full mt-2 overflow-hidden">
+                            <div id="sim-progress-bar" class="bg-gradient-to-r from-cyber-primary to-cyber-secondary h-full w-0 transition-all duration-300"></div>
+                        </div>
+                        <div class="flex justify-between items-center text-[10px] font-mono text-slate-500 mt-1.5">
+                            <span>0s (Ingestion)</span>
+                            <span id="remediation-target-time">Remediation: ~12s</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="competencies" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <div class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-cyber-accent/15 border border-cyber-accent/30 text-cyber-accent text-xs font-mono tracking-widest uppercase">
+                Core Competency Vectors
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                Cybersecurity Leadership & Tactical Domain Expertise
+            </h2>
+            <p class="text-slate-400 text-sm sm:text-base">
+                An advanced multi-dimensional visualization of Hemanth's core skills, strategic command, and technical execution capabilities.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <!-- Domain Competency Radar Chart -->
+            <div class="lg:col-span-5 bg-cyber-card border border-cyber-border rounded-2xl p-6 flex flex-col items-center justify-center">
+                <span class="text-xs font-mono text-slate-400 uppercase tracking-widest mb-4">Tactical Matrix</span>
+                <div class="w-full max-w-[340px] aspect-square relative flex items-center justify-center">
+                    <canvas id="competenciesRadarChart"></canvas>
+                </div>
+                <div class="mt-4 text-[11px] font-mono text-slate-500 text-center">
+                    Click on legend sectors to isolate specific cybersecurity pillars.
+                </div>
+            </div>
+
+            <!-- Detailed Intersecting Skill Node Ecosystem -->
+            <div class="lg:col-span-7 space-y-6">
+                <h3 class="text-xl font-bold text-white font-mono flex items-center gap-2">
+                    <i class="fa-solid fa-code-fork text-cyber-primary text-base"></i> Security Ecosystem breakdown
+                </h3>
+                <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                    Over a decade of operations has allowed Hemanth to command tools, frameworks, and operating architectures to balance corporate risk posture with rapid defense mechanics.
+                </p>
+
+                <!-- Skill Block Categories -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- Category 1: SecOps & Strategy -->
+                    <div class="bg-cyber-card/70 border border-cyber-border hover:border-cyber-primary/40 rounded-xl p-4 transition-all">
+                        <div class="flex items-center gap-2.5 text-cyber-primary mb-3">
+                            <i class="fa-solid fa-building-shield text-base"></i>
+                            <h4 class="font-mono text-sm font-bold text-slate-200">Autonomous SOC Strategy</h4>
+                        </div>
+                        <ul class="text-xs text-slate-400 space-y-2 font-mono">
+                            <li class="flex justify-between"><span>SOC Strategy & Governance</span> <span class="text-cyber-accent">Expert</span></li>
+                            <li class="flex justify-between"><span>Risk Posture Evaluation</span> <span class="text-cyber-accent">Expert</span></li>
+                            <li class="flex justify-between"><span>MITRE ATT&CK Mapping</span> <span class="text-cyber-accent">Advanced</span></li>
+                            <li class="flex justify-between"><span>Operating Models</span> <span class="text-cyber-accent">Leader</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Category 2: Automation Engines -->
+                    <div class="bg-cyber-card/70 border border-cyber-border hover:border-cyber-primary/40 rounded-xl p-4 transition-all">
+                        <div class="flex items-center gap-2.5 text-cyber-secondary mb-3">
+                            <i class="fa-solid fa-robot text-base"></i>
+                            <h4 class="font-mono text-sm font-bold text-slate-200">Agentic Automation</h4>
+                        </div>
+                        <ul class="text-xs text-slate-400 space-y-2 font-mono">
+                            <li class="flex justify-between"><span>Agentic Workflows</span> <span class="text-cyber-accent">Expert</span></li>
+                            <li class="flex justify-between"><span>SOAR Playbook Dev</span> <span class="text-cyber-accent">Expert</span></li>
+                            <li class="flex justify-between"><span>Remediation Scripts</span> <span class="text-cyber-accent">Advanced</span></li>
+                            <li class="flex justify-between"><span>LUA & CEF Parsers</span> <span class="text-cyber-accent">Advanced</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Category 3: Detection Platforms -->
+                    <div class="bg-cyber-card/70 border border-cyber-border hover:border-cyber-primary/40 rounded-xl p-4 transition-all">
+                        <div class="flex items-center gap-2.5 text-cyber-warning mb-3">
+                            <i class="fa-solid fa-magnifying-glass-chart text-base"></i>
+                            <h4 class="font-mono text-sm font-bold text-slate-200">Detection & Telemetry</h4>
+                        </div>
+                        <ul class="text-xs text-slate-400 space-y-2 font-mono">
+                            <li class="flex justify-between"><span>Next-Gen SIEM & Splunk ES</span> <span class="text-cyber-accent">Expert</span></li>
+                            <li class="flex justify-between"><span>UEBA & Asset Risk</span> <span class="text-cyber-accent">Advanced</span></li>
+                            <li class="flex justify-between"><span>EDR / IDS / DLP</span> <span class="text-cyber-accent">Expert</span></li>
+                            <li class="flex justify-between"><span>Deep Packet Inspection</span> <span class="text-cyber-accent">Advanced</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Category 4: Threat Intelligence -->
+                    <div class="bg-cyber-card/70 border border-cyber-border hover:border-cyber-primary/40 rounded-xl p-4 transition-all">
+                        <div class="flex items-center gap-2.5 text-cyber-danger mb-3">
+                            <i class="fa-solid fa-spider text-base"></i>
+                            <h4 class="font-mono text-sm font-bold text-slate-200">Incident & Threat Mgmt</h4>
+                        </div>
+                        <ul class="text-xs text-slate-400 space-y-2 font-mono">
+                            <li class="flex justify-between"><span>Incident Response Ops</span> <span class="text-cyber-accent">Expert</span></li>
+                            <li class="flex justify-between"><span>Threat Hunting Program</span> <span class="text-cyber-accent">Advanced</span></li>
+                            <li class="flex justify-between"><span>Breach & Attack Sim</span> <span class="text-cyber-accent">Advanced</span></li>
+                            <li class="flex justify-between"><span>Digital Risk Control</span> <span class="text-cyber-accent">Advanced</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-24 border-t border-cyber-border bg-[#070b1a]/40 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-20 space-y-4">
+                <div class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-cyber-primary/15 border border-cyber-primary/30 text-cyber-primary text-xs font-mono tracking-widest uppercase">
+                    Professional Timeline
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                    A Decadal Evolution in Cyber Operations
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base">
+                    From deep-technical investigation and packet analysis to defining cyber automation roadmap strategies as an executive.
+                </p>
+            </div>
+
+            <!-- Timeline Main Nodes -->
+            <div class="relative border-l-2 border-cyber-border ml-4 sm:ml-8 md:mx-auto md:max-w-5xl md:border-l-0">
+                <!-- Visual center line for desktops -->
+                <div class="absolute inset-y-0 left-1/2 w-0.5 bg-cyber-border hidden md:block"></div>
+
+                <!-- Job Entry 1: Synchrony AVP (Current) -->
+                <div class="relative flex flex-col md:flex-row items-stretch md:justify-between mb-16">
+                    <!-- Bullet node -->
+                    <div class="absolute -left-[9px] md:left-1/2 md:-translate-x-[9px] w-[18px] h-[18px] rounded-full bg-cyber-primary border-4 border-cyber-bg shadow-neon-blue z-10"></div>
+                    
+                    <!-- Left Job Detail Card -->
+                    <div class="w-full md:w-[46%] pl-6 md:pl-0 md:text-right flex flex-col md:items-end">
+                        <span class="inline-block px-3 py-1 rounded-md bg-cyber-primary/15 border border-cyber-primary/40 text-cyber-primary text-xs font-mono font-bold tracking-wide mb-2">Dec 2021 - Present (4 yrs 7 mos)</span>
+                        <h3 class="text-xl font-bold text-white">AVP Cyber Detection & Automation</h3>
+                        <h4 class="text-cyber-accent font-mono text-sm mt-0.5">Synchrony</h4>
+                        <span class="text-xs text-slate-500 font-mono mt-1">Hyderabad, India</span>
+                    </div>
+
+                    <!-- Right Job Narrative -->
+                    <div class="w-full md:w-[46%] pl-6 md:pl-8 mt-4 md:mt-0 bg-cyber-card/40 border border-cyber-border/60 rounded-xl p-5 hover:border-cyber-primary/40 transition-all">
+                        <p class="text-slate-300 text-sm leading-relaxed mb-3">
+                            Direct the strategy and design of **SOAR-enabled operating models**, unifying threat intel, active hunting, and cloud telemetry. Partner with global engineering leaders to balance corporate velocity with systemic resilience.
+                        </p>
+                        <ul class="text-xs text-slate-400 space-y-1.5 list-disc list-inside">
+                            <li>Orchestrate automated remediation playbooks for critical Incident Response.</li>
+                            <li>Formed and hired high-performing SOAR engineering teams.</li>
+                            <li>Integrated advanced threat telemetry dashboards using Next-Gen SIEM strategies.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Job Entry 2: Synchrony Senior IR Engineer -->
+                <div class="relative flex flex-col md:flex-row-reverse items-stretch md:justify-between mb-16">
+                    <!-- Bullet node -->
+                    <div class="absolute -left-[9px] md:left-1/2 md:-translate-x-[9px] w-[18px] h-[18px] rounded-full bg-cyber-secondary border-4 border-cyber-bg shadow-neon-purple z-10"></div>
+                    
+                    <!-- Right Job Detail Card (Reversed style) -->
+                    <div class="w-full md:w-[46%] pl-6 md:pl-0 md:text-left flex flex-col md:items-start">
+                        <span class="inline-block px-3 py-1 rounded-md bg-cyber-secondary/15 border border-cyber-secondary/40 text-cyber-secondary text-xs font-mono font-bold tracking-wide mb-2">Nov 2020 - Dec 2021 (1 yr 2 mos)</span>
+                        <h3 class="text-xl font-bold text-white">Senior IR Engineer, Cyber Operations</h3>
+                        <h4 class="text-cyber-accent font-mono text-sm mt-0.5">Synchrony</h4>
+                        <span class="text-xs text-slate-500 font-mono mt-1">Hyderabad, India</span>
+                    </div>
+
+                    <!-- Left Job Narrative -->
+                    <div class="w-full md:w-[46%] pl-6 md:pl-8 mt-4 md:mt-0 bg-cyber-card/40 border border-cyber-border/60 rounded-xl p-5 hover:border-cyber-secondary/40 transition-all">
+                        <p class="text-slate-300 text-sm leading-relaxed mb-3">
+                            Led critical individual contributions to orchestrate tools across **SIEM, UEBA, EDR, and Deep Packet Inspection (DPI)** tools. Designed automation scripts for active auto-remediation.
+                        </p>
+                        <ul class="text-xs text-slate-400 space-y-1.5 list-disc list-inside">
+                            <li>Advanced utilization of Splunk ES to build high-efficacy custom detections.</li>
+                            <li>Designed playbook strategies for phishing containment and malicious behavior blockades.</li>
+                            <li>Created after-action reports identifying and sealing control gaps post-pentest reviews.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Job Entry 3: Synchrony Security Engineer -->
+                <div class="relative flex flex-col md:flex-row items-stretch md:justify-between mb-16">
+                    <!-- Bullet node -->
+                    <div class="absolute -left-[9px] md:left-1/2 md:-translate-x-[9px] w-[18px] h-[18px] rounded-full bg-cyber-accent border-4 border-cyber-bg shadow-neon-green z-10"></div>
+                    
+                    <!-- Left Job Detail Card -->
+                    <div class="w-full md:w-[46%] pl-6 md:pl-0 md:text-right flex flex-col md:items-end">
+                        <span class="inline-block px-3 py-1 rounded-md bg-cyber-accent/15 border border-cyber-accent/40 text-cyber-accent text-xs font-mono font-bold tracking-wide mb-2">Nov 2018 - Nov 2020 (2 yrs 1 mo)</span>
+                        <h3 class="text-xl font-bold text-white">Security Engineer, Cyber Operations</h3>
+                        <h4 class="text-cyber-accent font-mono text-sm mt-0.5">Synchrony</h4>
+                        <span class="text-xs text-slate-500 font-mono mt-1">Hyderabad, India</span>
+                    </div>
+
+                    <!-- Right Job Narrative -->
+                    <div class="w-full md:w-[46%] pl-6 md:pl-8 mt-4 md:mt-0 bg-cyber-card/40 border border-cyber-border/60 rounded-xl p-5 hover:border-cyber-accent/40 transition-all">
+                        <p class="text-slate-300 text-sm leading-relaxed mb-3">
+                            Focused on engineering robust detection use cases. Integrated customized parsers using **LUA and CEF formats** to optimize ingestion in DPI infrastructure, boosting detection accuracy.
+                        </p>
+                        <ul class="text-xs text-slate-400 space-y-1.5 list-disc list-inside">
+                            <li>Engineered Splunk Enterprise Security correlation searches representing critical threats.</li>
+                            <li>Modeled anomalous asset risk scoring inside UEBA platform architectures.</li>
+                            <li>Developed a thorough background in hybrid cloud security protocols.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Job Entry 4: Threat Detection Analyst & Anthelio -->
+                <div class="relative flex flex-col md:flex-row-reverse items-stretch md:justify-between">
+                    <!-- Bullet node -->
+                    <div class="absolute -left-[9px] md:left-1/2 md:-translate-x-[9px] w-[18px] h-[18px] rounded-full bg-slate-500 border-4 border-cyber-bg z-10"></div>
+                    
+                    <!-- Right Job Detail Card -->
+                    <div class="w-full md:w-[46%] pl-6 md:pl-0 md:text-left flex flex-col md:items-start">
+                        <span class="inline-block px-3 py-1 rounded-md bg-slate-800 text-slate-400 text-xs font-mono font-bold tracking-wide mb-2">July 2016 - Nov 2018 (2 yrs 4 mos)</span>
+                        <h3 class="text-xl font-bold text-white">Incident Response Analyst & Forensics</h3>
+                        <h4 class="text-cyber-accent font-mono text-sm mt-0.5">Anthelio Healthcare / JSOC</h4>
+                        <span class="text-xs text-slate-500 font-mono mt-1">Gachibowli, Hyderabad, India</span>
+                    </div>
+
+                    <!-- Left Job Narrative -->
+                    <div class="w-full md:w-[46%] pl-6 md:pl-8 mt-4 md:mt-0 bg-cyber-card/40 border border-cyber-border/60 rounded-xl p-5 hover:border-slate-500/40 transition-all">
+                        <p class="text-slate-300 text-sm leading-relaxed mb-3">
+                            Monitored security event pipelines, executed deep alert validation, threat-hunted for APTS, and produced diagnostic post-incident briefings.
+                        </p>
+                        <ul class="text-xs text-slate-400 space-y-1.5 list-disc list-inside">
+                            <li>Analyzed raw network traffic flows to identify stealth command & control attempts.</li>
+                            <li>Performed security audit reviews of internal network topologies for defense improvements.</li>
+                            <li>Evaluated open-source SIEM structures for scalable event logs correlation.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="credentials" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            
+            <!-- Left Grid: Certifications & Honors -->
+            <div class="lg:col-span-7 space-y-8">
+                <div>
+                    <span class="text-xs font-mono text-cyber-primary uppercase tracking-widest block mb-1">Defense Validations</span>
+                    <h2 class="text-3xl font-extrabold text-white">Certifications & Honors</h2>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- Cert 1 -->
+                    <div class="flex items-start gap-3 bg-cyber-card border border-cyber-border p-4 rounded-xl hover:border-cyber-primary/40 transition-all">
+                        <div class="p-2.5 rounded-lg bg-cyber-primary/10 text-cyber-primary mt-1">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-200 text-sm">MITRE ATT&CK</h4>
+                            <p class="text-xs text-slate-500 font-mono mt-0.5">Foundations of Operationalizing</p>
+                        </div>
+                    </div>
+                    <!-- Cert 2 -->
+                    <div class="flex items-start gap-3 bg-cyber-card border border-cyber-border p-4 rounded-xl hover:border-cyber-primary/40 transition-all">
+                        <div class="p-2.5 rounded-lg bg-cyber-secondary/10 text-cyber-secondary mt-1">
+                            <i class="fa-solid fa-magnifying-glass text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-200 text-sm">Autopsy Forensic Expert</h4>
+                            <p class="text-xs text-slate-500 font-mono mt-0.5">8-Hour Online Digital Forensics</p>
+                        </div>
+                    </div>
+                    <!-- Cert 3 -->
+                    <div class="flex items-start gap-3 bg-cyber-card border border-cyber-border p-4 rounded-xl hover:border-cyber-primary/40 transition-all">
+                        <div class="p-2.5 rounded-lg bg-cyber-accent/10 text-cyber-accent mt-1">
+                            <i class="fa-solid fa-network-wired text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-200 text-sm">EASY Threat Intel</h4>
+                            <p class="text-xs text-slate-500 font-mono mt-0.5">Framework for Threat Intelligence</p>
+                        </div>
+                    </div>
+                    <!-- Cert 4 -->
+                    <div class="flex items-start gap-3 bg-cyber-card border border-cyber-border p-4 rounded-xl hover:border-cyber-primary/40 transition-all">
+                        <div class="p-2.5 rounded-lg bg-cyber-warning/10 text-cyber-warning mt-1">
+                            <i class="fa-solid fa-bug-slash text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-200 text-sm">BAS Foundation</h4>
+                            <p class="text-xs text-slate-500 font-mono mt-0.5">Breach & Attack Simulation</p>
+                        </div>
+                    </div>
+                    <!-- Cert 5 (CEH) -->
+                    <div class="col-span-1 sm:col-span-2 flex items-start gap-3 bg-gradient-to-tr from-cyber-card to-cyber-primary/5 border border-cyber-primary/30 p-4 rounded-xl shadow-md hover:border-cyber-primary/60 transition-all">
+                        <div class="p-2.5 rounded-lg bg-cyber-accent/20 text-cyber-accent mt-1">
+                            <i class="fa-solid fa-ribbon text-base"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Certified Ethical Hacker and Counter Measure Expert</h4>
+                            <p class="text-xs text-cyber-accent font-mono mt-1"><i class="fa-solid fa-certificate"></i> Verified Security Professional Defense Standard</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Grid: Publications & Academic Background -->
+            <div class="lg:col-span-5 space-y-8">
+                <!-- Academic block -->
+                <div>
+                    <span class="text-xs font-mono text-cyber-secondary uppercase tracking-widest block mb-1">Academic Background</span>
+                    <h2 class="text-3xl font-extrabold text-white">Education</h2>
+                </div>
+                <div class="bg-cyber-card border border-cyber-border rounded-xl p-5 space-y-4">
+                    <div class="flex items-start gap-3.5 pb-4 border-b border-cyber-border">
+                        <div class="p-2 bg-slate-900 rounded-lg text-cyber-secondary mt-1"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <div>
+                            <h4 class="font-bold text-slate-200 text-sm">Master of Computer Applications (MCA)</h4>
+                            <span class="text-xs text-slate-500 font-mono block">Aurora's P.G. College (2013 - 2016)</span>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3.5">
+                        <div class="p-2 bg-slate-900 rounded-lg text-cyber-primary mt-1"><i class="fa-solid fa-user-graduate"></i></div>
+                        <div>
+                            <h4 class="font-bold text-slate-200 text-sm">Bachelor of Science (BSc) in Computer Science</h4>
+                            <span class="text-xs text-slate-500 font-mono block">Sidhartha Degree College (2008 - 2011)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Publications block -->
+                <div class="space-y-4">
+                    <h3 class="text-xl font-bold text-white font-mono flex items-center gap-2">
+                        <i class="fa-solid fa-book-open text-cyber-warning"></i> Research & Publications
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="bg-[#0c1020]/50 border border-cyber-border/70 rounded-xl p-4 hover:border-cyber-warning/40 transition-all">
+                            <h4 class="font-semibold text-slate-200 text-sm">Anatomy of Next-Gen SIEM Architecture</h4>
+                            <p class="text-xs text-slate-400 mt-1 leading-relaxed">
+                                Investigation of unified event log processing, parsing logic, and cloud security correlation models.
+                            </p>
+                        </div>
+                        <div class="bg-[#0c1020]/50 border border-cyber-border/70 rounded-xl p-4 hover:border-cyber-warning/40 transition-all">
+                            <h4 class="font-semibold text-slate-200 text-sm">Port Scanning & Active Profiling Mitigations</h4>
+                            <p class="text-xs text-slate-400 mt-1 leading-relaxed">
+                                Strategy for real-time alerting of network enumeration scripts to prevent adversary reconnaissance mapping.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="terminal" class="py-24 border-t border-cyber-border bg-[#03050a] relative">
+        <div class="absolute inset-0 cyber-grid opacity-10 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <div class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-cyber-accent/15 border border-cyber-accent/30 text-cyber-accent text-xs font-mono tracking-widest uppercase">
+                    Secure Command Interface
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                    Establish Secure Transmission
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base">
+                    Execute command prompts inside the active SOC emulator below to retrieve validated pathways or forward secure messages.
+                </p>
+            </div>
+
+            <!-- Terminal Matrix Frame -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch max-w-5xl mx-auto">
+                
+                <!-- Command Line Console -->
+                <div class="lg:col-span-7 bg-black border border-cyber-border/80 rounded-2xl p-5 shadow-2xl flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between border-b border-cyber-border/60 pb-3">
+                            <div class="flex items-center space-x-2">
+                                <span class="w-2.5 h-2.5 rounded-full bg-cyber-accent animate-pulse block"></span>
+                                <span class="text-[11px] font-mono text-cyber-accent tracking-wide uppercase">HEMANTH-RECON.SHELL (v1.2.9)</span>
+                            </div>
+                            <span class="text-[10px] text-slate-500 font-mono">HYDERABAD, IN</span>
+                        </div>
+                        
+                        <!-- Terminal Commands Log Area -->
+                        <div id="cmd-history" class="space-y-3 font-mono text-xs text-slate-400 min-h-[220px] max-h-[300px] overflow-y-auto pr-1">
+                            <div><span class="text-cyber-accent">$</span> <span class="text-white">help</span></div>
+                            <div class="text-slate-500">Available commands:</div>
+                            <div class="grid grid-cols-2 gap-x-4 gap-y-1 text-slate-500 max-w-sm">
+                                <span>• <strong class="text-cyber-primary">about</strong> - Hemanth's summary</span>
+                                <span>• <strong class="text-cyber-primary">contact</strong> - Get direct connections</span>
+                                <span>• <strong class="text-cyber-primary">skills</strong> - Domain list summary</span>
+                                <span>• <strong class="text-cyber-primary">clear</strong> - Reset screen view</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Input Console Prompt -->
+                    <div class="mt-4 pt-3 border-t border-cyber-border/60 flex items-center gap-2">
+                        <span class="text-cyber-accent font-mono text-sm">$</span>
+                        <input id="terminal-input" type="text" placeholder="Type command (about, contact, skills, clear)..." class="flex-1 bg-transparent border-none outline-none focus:ring-0 text-white font-mono text-sm" onkeydown="handleTerminalSubmit(event)">
+                        <button onclick="executeTerminalCommand()" class="text-xs font-mono px-3 py-1.5 bg-slate-900 border border-cyber-border/80 hover:border-cyber-primary rounded text-slate-300">Run</button>
+                    </div>
+                </div>
+
+                <!-- Direct Contact Details Card / Form -->
+                <div class="lg:col-span-5 bg-cyber-card border border-cyber-border rounded-2xl p-6 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute -top-10 -right-10 w-36 h-36 bg-cyber-primary/10 rounded-full blur-2xl"></div>
+                    <div class="space-y-5 relative z-10">
+                        <h3 class="text-lg font-bold text-white font-mono flex items-center gap-2"><i class="fa-solid fa-address-book text-cyber-primary"></i> Contact Channels</h3>
+                        
+                        <!-- Details -->
+                        <div class="space-y-3.5 text-xs font-mono">
+                            <div class="flex items-center gap-3.5 p-3 bg-slate-950/70 border border-cyber-border/40 rounded-xl">
+                                <i class="fa-solid fa-map-location-dot text-cyber-accent text-base"></i>
+                                <div>
+                                    <span class="text-slate-500 text-[10px] uppercase block">Location</span>
+                                    <span class="text-slate-200">Hyderabad, Telangana, India</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3.5 p-3 bg-slate-950/70 border border-cyber-border/40 rounded-xl">
+                                <i class="fa-solid fa-envelope text-cyber-primary text-base"></i>
+                                <div>
+                                    <span class="text-slate-500 text-[10px] uppercase block">Direct Secure Mail</span>
+                                    <a href="mailto:hemanthpasumarthi8@gmail.com" class="text-slate-200 hover:text-cyber-primary transition-colors">hemanthpasumarthi8@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3.5 p-3 bg-slate-950/70 border border-cyber-border/40 rounded-xl">
+                                <i class="fa-solid fa-phone text-cyber-secondary text-base"></i>
+                                <div>
+                                    <span class="text-slate-500 text-[10px] uppercase block">Mobile Operations</span>
+                                    <a href="tel:+919030504142" class="text-slate-200 hover:text-cyber-primary transition-colors">+91 9030504142</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3.5 p-3 bg-slate-950/70 border border-cyber-border/40 rounded-xl">
+                                <i class="fa-brands fa-linkedin text-cyber-primary text-base"></i>
+                                <div>
+                                    <span class="text-slate-500 text-[10px] uppercase block">Professional Sync Link</span>
+                                    <a href="https://www.linkedin.com/in/hemanthpvn" target="_blank" rel="noopener noreferrer" class="text-slate-200 hover:text-cyber-primary hover:underline transition-colors">linkedin.com/in/hemanthpvn</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Visual Security Footer Signature inside the card -->
+                    <div class="pt-6 mt-6 border-t border-cyber-border text-[10px] font-mono text-slate-500 flex justify-between items-center relative z-10">
+                        <span>DATA ENCRYPTED SHA-256</span>
+                        <div class="flex gap-1.5 text-xs">
+                            <a href="https://www.linkedin.com/in/hemanthpvn" target="_blank" class="hover:text-white" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="mailto:hemanthpasumarthi8@gmail.com" class="hover:text-white" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t border-cyber-border/80 bg-cyber-bg py-8 font-mono text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500">
+            <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-cyber-accent"></span>
+                <span>© 2026 Hemanth Pasumarthi. All strategic defenses reserved.</span>
+            </div>
+            <div class="flex gap-4">
+                <a href="#about" class="hover:text-cyber-primary transition-colors">Back to Hero</a>
+                <span>|</span>
+                <span class="text-slate-600">Secure Operation Portal</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- MOBILE MENU FUNCTIONALITY ---
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on clicking any navigation anchor
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // --- PLAYBOOK SIMULATOR DATA & LOGIC ---
+        const playbookScenarios = {
+            phishing: {
+                name: "Phishing Automated Containment",
+                remediationTarget: "Remediation: ~12s",
+                nodes: [
+                    { title: "Inbound Email Alert", icon: "fa-triangle-exclamation animate-pulse text-cyber-warning", sub: "User reported email parsed" },
+                    { title: "Intel Verification", icon: "fa-brain text-cyber-primary", sub: "IOC domain analyzed" },
+                    { title: "Host Quarantine", icon: "fa-ban text-cyber-danger", sub: "Isolating infected device" },
+                    { title: "Playbook Success", icon: "fa-clipboard-check text-cyber-accent", sub: "IR workflow archived" }
+                ],
+                logs: [
+                    "00:00:01 - [INGESTION] Received alert: 'Suspicious email attachment clicked'. Priority: High.",
+                    "00:00:02 - [ANALYSIS] Extraction: URL identified -> hxxps://secure-bank-login-update.com/signin",
+                    "00:00:04 - [ENRICHMENT] Querying Threat Intelligence API (VirusTotal, EASY framework).",
+                    "00:00:05 - [INTEL] Domain flag matched: 'Phishing Campaign Vector 4'. Confidence: 99.4%",
+                    "00:00:07 - [ORCHESTRATION] Activating containment playbook: PHISH-IR-ISOLATION.",
+                    "00:00:09 - [EDR] Sending network isolation signal to CrowdStrike API for Host ID: NY-CORP-L9284.",
+                    "00:00:10 - [OK] Host network isolation successful. Local session tokens invalidated.",
+                    "00:00:11 - [NOTIFICATION] Sent automated alert message payload to SOC team on Slack & Splunk.",
+                    "00:00:12 - [ARCHIVE] Playbook completed. Incident ticket closed. After-Action report uploaded. Remediation complete."
+                ]
+            },
+            lateral: {
+                name: "Anomalous AD Attack Containment",
+                remediationTarget: "Remediation: ~18s",
+                nodes: [
+                    { title: "UEBA Risk Deviation", icon: "fa-triangle-exclamation animate-pulse text-cyber-danger", sub: "Anomalous LDAP query" },
+                    { title: "AD Verification", icon: "fa-shield-halved text-cyber-primary", sub: "Target Domain controller" },
+                    { title: "Revoke Credentials", icon: "fa-key text-cyber-warning", sub: "Suspending AD user account" },
+                    { title: "Remediation OK", icon: "fa-clipboard-check text-cyber-accent", sub: "Incident locked and closed" }
+                ],
+                logs: [
+                    "00:00:01 - [INGESTION] Splunk ES triggered alert: 'Mass LDAP reconnaissance query from dev-workstation'.",
+                    "00:00:03 - [ANALYSIS] Correlating telemetry. Anomalous risk factor: 94/100 (UEBA Engine).",
+                    "00:00:05 - [ENRICHMENT] Queried Active Directory API. User account: 'contractor_v9'. Admin rights verified.",
+                    "00:00:08 - [DECISION] Threat vector resembles T1110 (Brute Force / LDAP Enumeration). Impact level: Critical.",
+                    "00:00:11 - [ORCHESTRATION] Launching playbook: AD-REMED-LOCK.",
+                    "00:00:13 - [AD] Executing command to suspend user account 'contractor_v9' on domain synchrony.ad.",
+                    "00:00:15 - [OK] Account locked out. Current active sessions terminated across cloud environment.",
+                    "00:00:17 - [SIEM] Created high priority ticket for investigation team with attached audit log CSV.",
+                    "00:00:18 - [ARCHIVE] Autonomous remediation successful. SOC incident closed to prevent lateral hops."
+                ]
+            }
+        };
+
+        let currentScenario = 'phishing';
+        let simulationInterval = null;
+        let activeTimeoutIds = [];
+
+        function switchPlaybook(scenario) {
+            resetSimulation();
+            currentScenario = scenario;
+            const data = playbookScenarios[scenario];
+
+            // Update scenario specific header texts
+            document.getElementById('selected-playbook-name').innerText = data.name;
+            document.getElementById('remediation-target-time').innerText = data.remediationTarget;
+
+            // Update Scenario tab buttons state
+            const btnPhishing = document.getElementById('btn-playbook-phishing');
+            const btnLateral = document.getElementById('btn-playbook-lateral');
+            if (scenario === 'phishing') {
+                btnPhishing.className = "px-3.5 py-1.5 text-xs font-mono font-semibold rounded-lg bg-cyber-primary/20 text-cyber-primary border border-cyber-primary/50 transition-all hover:bg-cyber-primary/30";
+                btnLateral.className = "px-3.5 py-1.5 text-xs font-mono font-semibold rounded-lg bg-slate-900 text-slate-400 border border-cyber-border transition-all hover:border-cyber-primary/40 hover:text-white";
+            } else {
+                btnPhishing.className = "px-3.5 py-1.5 text-xs font-mono font-semibold rounded-lg bg-slate-900 text-slate-400 border border-cyber-border transition-all hover:border-cyber-primary/40 hover:text-white";
+                btnLateral.className = "px-3.5 py-1.5 text-xs font-mono font-semibold rounded-lg bg-cyber-primary/20 text-cyber-primary border border-cyber-primary/50 transition-all hover:bg-cyber-primary/30";
+            }
+
+            // Update nodes base view layout
+            for (let i = 1; i <= 4; i++) {
+                const nodeInfo = data.nodes[i-1];
+                const nodeTitleEl = document.getElementById(`node-${i}-title`);
+                const nodeSubEl = document.getElementById(`node-${i}-sub`);
+                
+                if (nodeTitleEl) nodeTitleEl.innerText = `${i}. ${nodeInfo.title}`;
+                if (nodeSubEl) nodeSubEl.innerText = nodeInfo.sub;
+            }
+        }
+
+        function resetSimulation() {
+            // Clear running timers
+            activeTimeoutIds.forEach(id => clearTimeout(id));
+            activeTimeoutIds = [];
+            if (simulationInterval) {
+                clearInterval(simulationInterval);
+                simulationInterval = null;
+            }
+
+            // Reset node icon styling to default dark
+            for (let i = 1; i <= 4; i++) {
+                const iconBox = document.getElementById(`node-${i}-icon`);
+                iconBox.className = "w-14 h-14 rounded-xl bg-[#0e172a] border border-cyber-border flex items-center justify-center text-slate-500 text-xl transition-all duration-300 shadow-lg";
+                
+                // Keep first node indicator colored
+                if (i === 1) {
+                    iconBox.classList.remove('text-slate-500');
+                    iconBox.classList.add('text-cyber-warning');
+                }
+            }
+
+            // Reset progress bar
+            document.getElementById('sim-progress-bar').style.width = '0%';
+            document.getElementById('speed-indicator').innerText = 'Idle';
+            document.getElementById('speed-indicator').className = 'text-xs font-mono text-slate-500 font-semibold';
+
+            // Reset console text
+            document.getElementById('sim-terminal').innerHTML = `<div class="text-slate-500">// System ready. Click 'Run Simulation' to initiate telemetry ingestion.</div>`;
+        }
+
+        function startPlaybookSimulation() {
+            resetSimulation();
+            const data = playbookScenarios[currentScenario];
+            const terminal = document.getElementById('sim-terminal');
+            terminal.innerHTML = ""; // Clear existing screen output
+            
+            document.getElementById('speed-indicator').innerText = 'RUNNING';
+            document.getElementById('speed-indicator').className = 'text-xs font-mono text-cyber-primary font-bold animate-pulse';
+
+            // Iterate and inject log segments
+            data.logs.forEach((log, index) => {
+                const timeoutId = setTimeout(() => {
+                    // Update log text line
+                    const logLine = document.createElement('div');
+                    
+                    if (log.includes('[INGESTION]')) {
+                        logLine.className = 'text-cyber-warning';
+                        highlightNode(1, 'bg-cyber-warning/20 border-cyber-warning text-cyber-warning shadow-neon-blue');
+                        updateProgressBar(25);
+                    } else if (log.includes('[INTEL]') || log.includes('[ENRICHMENT]')) {
+                        logLine.className = 'text-cyber-primary';
+                        highlightNode(2, 'bg-cyber-primary/20 border-cyber-primary text-cyber-primary shadow-neon-blue');
+                        updateProgressBar(50);
+                    } else if (log.includes('[OK]') || log.includes('[EDR]') || log.includes('[AD]')) {
+                        logLine.className = 'text-cyber-danger';
+                        highlightNode(3, 'bg-cyber-danger/20 border-cyber-danger text-cyber-danger shadow-neon-blue');
+                        updateProgressBar(75);
+                    } else if (log.includes('[ARCHIVE]')) {
+                        logLine.className = 'text-cyber-accent';
+                        highlightNode(4, 'bg-cyber-accent/20 border-cyber-accent text-cyber-accent shadow-neon-green');
+                        updateProgressBar(100);
+                        
+                        document.getElementById('speed-indicator').innerText = 'SECURE';
+                        document.getElementById('speed-indicator').className = 'text-xs font-mono text-cyber-accent font-bold';
+                    } else {
+                        logLine.className = 'text-slate-400';
+                    }
+
+                    logLine.innerText = log;
+                    terminal.appendChild(logLine);
+                    terminal.scrollTop = terminal.scrollHeight; // Keep scrolling bottom
+                }, index * 1200);
+
+                activeTimeoutIds.push(timeoutId);
+            });
+        }
+
+        function highlightNode(nodeNum, classes) {
+            // Set all preceding nodes to safe accent (green)
+            for (let i = 1; i < nodeNum; i++) {
+                const iconBox = document.getElementById(`node-${i}-icon`);
+                iconBox.className = "w-14 h-14 rounded-xl bg-cyber-accent/15 border border-cyber-accent text-cyber-accent flex items-center justify-center text-xl transition-all duration-300 shadow-lg";
+            }
+            // Set current node style
+            const currentNode = document.getElementById(`node-${nodeNum}-icon`);
+            currentNode.className = `w-14 h-14 rounded-xl flex items-center justify-center text-xl transition-all duration-300 shadow-lg ${classes}`;
+        }
+
+        function updateProgressBar(percentage) {
+            document.getElementById('sim-progress-bar').style.width = `${percentage}%`;
+        }
+
+        // --- CHARTJS IMPLEMENTATION: CORE COMPETENCIES ---
+        window.addEventListener('load', () => {
+            const ctx = document.getElementById('competenciesRadarChart').getContext('2d');
+            
+            // Premium custom radar styling options
+            const radarChart = new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: [
+                        'Security Automation & SOAR', 
+                        'Threat Hunting & Detection', 
+                        'Incident Response Operations', 
+                        'Security Governance & Strategy', 
+                        'Risk Mitigation Posture', 
+                        'Cloud Security & Architecture'
+                    ],
+                    datasets: [{
+                        label: 'Hemanth Pasumarthi Expertise Levels',
+                        data: [98, 92, 95, 90, 88, 85],
+                        backgroundColor: 'rgba(59, 130, 246, 0.2)',
+                        borderColor: '#3b82f6',
+                        borderWidth: 2,
+                        pointBackgroundColor: '#8b5cf6',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: '#3b82f6'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false, // Cleaner presentation
+                        }
+                    },
+                    scales: {
+                        r: {
+                            angleLines: {
+                                color: 'rgba(30, 41, 59, 0.5)'
+                            },
+                            grid: {
+                                color: 'rgba(30, 41, 59, 0.5)'
+                            },
+                            pointLabels: {
+                                color: '#94a3b8',
+                                font: {
+                                    family: 'JetBrains Mono',
+                                    size: 10
+                                }
+                            },
+                            ticks: {
+                                display: false,
+                                maxTicksLimit: 5
+                            },
+                            suggestedMin: 50,
+                            suggestedMax: 100
+                        }
+                    }
+                }
+            });
+
+            // Populate some mock initial data in the hero stream log for visual depth
+            setInterval(() => {
+                const logs = [
+                    "Checking splunk detection content sync...",
+                    "UEBA platform validation: OK.",
+                    "Active incident count: 0",
+                    "Security posturing score: 98%",
+                    "Playbook orchestrator polling successful."
+                ];
+                const randomLog = logs[Math.floor(Math.random() * logs.length)];
+                const stream = document.getElementById('hero-log-stream');
+                if (stream) {
+                    const firstItem = stream.firstElementChild;
+                    if (firstItem) stream.removeChild(firstItem);
+                    const newItem = document.createElement('div');
+                    newItem.className = 'text-slate-400 flex items-center gap-1.5';
+                    newItem.innerHTML = `<i class="fa-solid fa-check text-cyber-accent text-[9px]"></i> <span>${randomLog}</span>`;
+                    stream.appendChild(newItem);
+                }
+            }, 5000);
+        });
+
+        // --- COMMAND LINE TERMINAL INTERACTIVE SHELL ---
+        const terminalLogs = {
+            about: `[SUMMARY]
+I lead security automation and operations with a focus on transforming incident response into scalable, intelligence-driven defense capabilities. Over 10+ years in cybersecurity, progression from IR engineer to leading threat detection and SOAR operating strategies. Currently driving security operations strategy at Synchrony.`,
+            contact: `[CONTACT PORTALS]
+-------------------------------------------------------
+• Mobile Secure Line: +91 9030504142
+• Email Link: hemanthpasumarthi8@gmail.com
+• Location: Hyderabad, Telangana, India
+• LinkedIn: https://www.linkedin.com/in/hemanthpvn
+-------------------------------------------------------`,
+            skills: `[TACTICAL COMPETENCIES]
+-------------------------------------------------------
+• Agentic Workflows & SOAR Auto-remediations
+• SIEM (Next-Gen, Splunk ES developer)
+• Threat Hunting, Detection, & Deep Packet Inspection
+• Cloud Security Architecture & Governance
+• Risk Posture, Forensics & ATT&CK Framework
+-------------------------------------------------------`,
+            help: `Available commands:
+• 'about'    - View Hemanth's summary bio
+• 'contact'  - Print active verified touchpoints
+• 'skills'   - Display categorized technical skills
+• 'clear'    - Reset command log screen`
+        };
+
+        function handleTerminalSubmit(event) {
+            if (event.key === 'Enter') {
+                executeTerminalCommand();
+            }
+        }
+
+        function executeTerminalCommand() {
+            const inputEl = document.getElementById('terminal-input');
+            const historyEl = document.getElementById('cmd-history');
+            const command = inputEl.value.trim().toLowerCase();
+            
+            if (command === '') return;
+
+            // Log prompt submission line
+            const userLine = document.createElement('div');
+            userLine.className = 'text-white flex items-center gap-1.5 mt-2';
+            userLine.innerHTML = `<span class="text-cyber-accent">$</span> <span>${command}</span>`;
+            historyEl.appendChild(userLine);
+
+            if (command === 'clear') {
+                historyEl.innerHTML = "";
+            } else if (terminalLogs[command]) {
+                const respLine = document.createElement('pre');
+                respLine.className = 'text-slate-400 mt-1 whitespace-pre-wrap font-mono text-xs leading-relaxed';
+                respLine.innerText = terminalLogs[command];
+                historyEl.appendChild(respLine);
+            } else {
+                const errLine = document.createElement('div');
+                errLine.className = 'text-cyber-danger mt-1';
+                errLine.innerText = `Command not recognized: '${command}'. Type 'help' to review directory listings.`;
+                historyEl.appendChild(errLine);
+            }
+
+            inputEl.value = '';
+            historyEl.scrollTop = historyEl.scrollHeight;
+        }
+    </script>
 </body>
 </html>
